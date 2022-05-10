@@ -46,5 +46,5 @@ jobs:
                 url: "https://api.vercel.com/v2/domains/dospore.xyz/records"
                 method: 'POST'
                 bearerToken: ${{ secrets.VERCEL_TOKEN }}
-                data: "{ \"type\": \"TXT\", \"name\": \"IPFS_DNSLink\", \"value\": \"/ipfs/${{ steps.upload.outputs.hash }}\" }"
+                data: "{ \"type\": \"TXT\", \"name\": \"IPFS_DNSLink\", \"value\": \"dnslink=/ipfs/${{ steps.upload.outputs.hash }}\" }"
 
